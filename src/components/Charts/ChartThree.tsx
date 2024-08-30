@@ -101,12 +101,12 @@ export default function SplineAreaChart() {
 
   return (
     <Card className="border-[#444444] w-[680px] bg-gradient-to-t from-[#1F1F1F] to-[#0A0A0A] ">
-      <CardHeader className="flex flex-col gap-4  justify-between md:flex-row md:items-center border border-green-700 rounded-none mt">
-        <div className="text-white flex justify-between  items-center w-full bg-black">
-          <h1 className="font-inter font-normal text-[14px]  leading-[14px] text-white">
+      <CardHeader className="flex flex-col gap-4  justify-between md:flex-row md:items-center rounded-none mt">
+        <div className="text-white flex justify-between  items-center w-full bg-[#0A0A0A]">
+          <h1 className="font-inter font-normal text-[14px] py-2 leading-[14px] text-white">
             Current Value
           </h1>
-          <div className="flex space-x-4 border-2 border-red-900">
+          <div className="flex space-x-4 ">
             {['1H', '24H', '1W', '1M', '1Y', 'ALL'].map((range) => (
               <button
                 key={range}
@@ -123,7 +123,7 @@ export default function SplineAreaChart() {
           </div>
         </div>
       </CardHeader>
-      <CardBody className="px-2 pb-0 border-2">
+      <CardBody className="px-2 pb-0 ">
         <h2 className="text-white text-[24px] mb-4">USD 10,166,062</h2>
         <Chart {...chartConfig(chartData)} />
       </CardBody>

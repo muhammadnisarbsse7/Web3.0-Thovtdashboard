@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import CardDataStats from '../../components/CardDataStats';
-import ChartOne from '../../components/Charts/ChartOne';
+// import ChartOne from '../../components/Charts/ChartOne';
 import ChartThree from '../../components/Charts/ChartThree';
 import ChartTwo from '../../components/Charts/ChartTwo';
 import CarouselCard from '../../components/MyPortfolio/ThovtBalance';
-import ChatCard from '../../components/Chat/ChatCard';
-import MapOne from '../../components/Maps/MapOne';
-import TableOne from '../../components/Tables/TableOne';
+// import ChatCard from '../../components/Chat/ChatCard';
+// import MapOne from '../../components/Maps/MapOne';
+// import TableOne from '../../components/Tables/TableOne';
 import { MessageIcon } from '../../Svg/MessageIcon';
 import { DividedIcon } from '../../Svg/DividedIcon';
 import { CalenderIcon } from '../../Svg/CalendeIcon';
@@ -26,11 +26,13 @@ const ECommerce: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-row border-2  w-[1144px] gap-12">
+      <div className="flex flex-row   w-[1144px] gap-12">
+        {/* Personal dashboard card  */}
+
         <div className="flex flex-col">
           <Breadcrumb pageName="Personal Dashboard" />
 
-          <div className="flex border-2 gap-4 md:gap-4 w-[650px] 2xl:gap-7.5">
+          <div className="flex flex-wrap gap-4 md:gap-4 w-full max-w-[689px] 2xl:gap-7.5">
             <CardDataStats
               title="Total Dividends"
               total="$156.97"
@@ -58,7 +60,7 @@ const ECommerce: React.FC = () => {
           </div>
 
           <div className="mt-4 flex flex-col gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
-            <div className="flex justify-between border w-[650px]">
+            <div className="flex justify-between w-[682px]">
               <h1 className="font-inter font-semibold text-[20px] leading-5 text-white">
                 Token Balance
               </h1>
@@ -87,16 +89,11 @@ const ECommerce: React.FC = () => {
             </div>
             <ChartThree />
             <ChartTwo />
-            {/* <ChartTwo /> */}
-            {/* <MapOne /> */}
-            {/* <div className="col-span-12 xl:col-span-8">
-          <TableOne />
-        </div> */}
-
-            {/* <ChatCard /> */}
           </div>
         </div>
+
         <div className="">
+          {/* Balance  part*/}
           <div className="">
             <Breadcrumb pageName="Balance" />
             <CarouselCard />
@@ -112,11 +109,14 @@ const ECommerce: React.FC = () => {
             </div>
           </div>
 
+          {/* Token Balance Toggle */}
+
           <div className="mt-[43px]">
             <Breadcrumb pageName="Transactions " />
           </div>
+
           <div>
-            <div className="flex rounded-[9px] h-[42.58px] w-[281px] bg-[#FFE9A4] border-2 border-[#ffffff]  gap-[1px]">
+            <div className="flex rounded-[9px] h-[42.58px] w-[281px] bg-[#FFE9A4]  border-[#ffffff]  gap-[1px]">
               <button
                 onClick={() => handleTabClick('Dividends')}
                 className={`px-10 py-1 m-[2px] rounded-md ${
@@ -139,7 +139,9 @@ const ECommerce: React.FC = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col mt-[22.42px] space-y-5 border">
+
+          {/* Transaction */}
+          <div className="flex flex-col mt-[22.42px] space-y-5 ">
             <div className="flex ">
               <div className="h-[35px] w-[3.89px] bg-[#00C586] rounded-[3.89px]"></div>
               <div className="flex flex-col ml-[19.44px] justify-between">

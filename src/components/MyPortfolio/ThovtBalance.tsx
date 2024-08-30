@@ -10,7 +10,7 @@ import { PopupIcon } from '../../Svg/PopuoIcon';
 const CarouselCard: React.FC = () => {
   return (
     <div
-      className="w-72 h-48 border-2 bg-cover bg-center rounded-lg p-5 flex flex-col justify-between"
+      className="w-72 h-48  bg-cover bg-center rounded-lg p-5 flex flex-col justify-between"
       style={{ backgroundImage: `url(${thovtBalance})` }}
     >
       <div>

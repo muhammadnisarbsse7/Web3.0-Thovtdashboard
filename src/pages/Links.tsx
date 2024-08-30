@@ -27,7 +27,7 @@ const Links = () => {
     <div className="container mx-auto p-4">
       <div>
         <h1 className="font-inter font-semibold text-[20px] text-white leading-5 ">
-          Linkss
+          Links
         </h1>
       </div>
       <div className="mt-[26px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">

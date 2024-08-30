@@ -3,8 +3,8 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
-import SignIn from './pages/Authentication/SignIn';
-import SignUp from './pages/Authentication/SignUp';
+// import SignIn from './pages/Authentication/SignIn';
+// import SignUp from './pages/Authentication/SignUp';
 import Treasury from './pages/Treasury';
 import Chart from './pages/Chart';
 import MyPortfolio from './pages/Dashboard/MyPortfolio';
@@ -13,8 +13,8 @@ import FormLayout from './pages/Form/FormLayout';
 import Thovt from './pages/Thovt';
 import Links from './pages/Links';
 import Dao from './pages/Dao';
-import Alerts from './pages/UiElements/Alerts';
-import Buttons from './pages/UiElements/Buttons';
+// import Alerts from './pages/UiElements/Alerts';
+// import Buttons from './pages/UiElements/Buttons';
 import DefaultLayout from './layout/DefaultLayout';
 
 function App() {

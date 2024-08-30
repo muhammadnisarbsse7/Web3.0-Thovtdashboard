@@ -140,12 +140,12 @@ export default function BarChart() {
   };
 
   return (
-    <Card className="border-[#444444] w-[650px] bg-gradient-to-t from-[#1F1F1F] to-[#0A0A0A] border-2">
+    <Card className="border-[#444444] w-[682px] bg-gradient-to-t from-[#1F1F1F] to-[#0A0A0A]">
       <CardHeader
         floated={true}
         shadow={false}
         color="transparent"
-        className="flex flex-col gap-4 rounded-none justify-between md:flex-row md:items-center border"
+        className="flex flex-col gap-4 rounded-none justify-between md:flex-row md:items-center"
       >
         <div className="w-max rounded-lg text-white">
           <h1 className="font-inter font-bold text-[18px] text-white ml-[10px] leading-5">
@@ -179,7 +179,7 @@ export default function BarChart() {
           </select>
         </div>
       </CardHeader>
-      <CardBody className="px-2 pb-0 border-2">
+      <CardBody className="px-2 pb-0 ">
         <Chart {...chartConfig(chartData[selectedYear])} />
       </CardBody>
     </Card>
