@@ -75,192 +75,140 @@ const CardRow = () => {
           />
         ))}
       </div>
-      <div className="flex mt-[46px] gap-[30px]">
-        <div>
+
+      <div className="flex flex-col lg:flex-row mt-6 lg:mt-12 gap-6 lg:gap-8">
+        <div className="flex-1">
           <Breadcrumb pageName="Treasury Growth" />
           <ChartThree />
         </div>
-        <div className="flex flex-col">
-          <div className="flex ">
-            <Breadcrumb pageName="Treasury Portfolio" />
-            <div className="ml-[60px]">
-              <p className="font-inter font-semibold text-[14px] leading-[14px] text-white">
+        <div className="flex-1 flex flex-col space-y-5">
+          <div className="flex items-center justify-between lg:justify-start lg:space-x-8 border">
+            {/* <Breadcrumb pageName="Treasury Portfolio" /> */}
+            <h1 className="font inter font-semibold text-[20px] text-white leading-5 ">
+              Treasury Portfolio
+            </h1>
+            <div className="ml-4 lg:ml-12">
+              <p className="font-inter font-semibold text-sm lg:text-base text-white">
                 List
               </p>
-              <div className="h-[2px] w-[19px] bg-[#FFE9A4] mt-[10px]"></div>
+              <div className="h-[2px] w-5 bg-[#FFE9A4] mt-2"></div>
             </div>
-            <div className="font-inter font-normal text-[#9A9EB1] text-[14px] leading-[14px] ml-[33px]">
+            <div className="font-inter font-normal text-[#9A9EB1] text-sm lg:text-base">
               Chart
             </div>
           </div>
-          <div className="space-y-5">
-            <div className="flex flex-row">
-              <RealEstateIcon />
-              <div className="flex flex-col justify-between ml-[10px]">
-                <h1 className="font-inter font-semibold text-[14px] leading-5 text-white">
-                  Real Estate
-                </h1>
-                <h1 className="font-inter font-normal text-[14px] leading-[16px] text-[#A6B2CD]">
-                  BTC
-                </h1>
+          <div className="space-y-4 border">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="flex flex-row items-center">
+                <RealEstateIcon />
+                <div className="flex flex-col justify-between ml-2 lg:ml-4">
+                  <h1 className="font-inter font-semibold text-sm lg:text-base text-white">
+                    Real Estate
+                  </h1>
+                  <h1 className="font-inter font-normal text-sm lg:text-base text-[#A6B2CD]">
+                    BTC
+                  </h1>
+                </div>
+                <div className="flex flex-col justify-between ml-auto lg:ml-24">
+                  <h1 className="font-inter font-semibold text-white text-sm lg:text-base">
+                    $6,000,000
+                  </h1>
+                  <h1 className="font-inter font-normal text-sm lg:text-base text-[#A6B2CD]">
+                    BTC 224,11
+                  </h1>
+                </div>
               </div>
-              <div className="flex flex-col justify-between ml-[100px]">
-                <h1 className="font-inter font-semibold text-white text-[14px] leading-5">
-                  $6,000,000
-                </h1>
-                <h1 className="font-inter font-normal text-[14px] text-[#A6B2CD] leading-4">
-                  BTC 224,11
-                </h1>
-              </div>
-            </div>
-            <div className="flex flex-row">
-              <RealEstateIcon />
-              <div className="flex flex-col justify-between ml-[10px]">
-                <h1 className="font-inter font-semibold text-[14px] leading-5 text-white">
-                  Real Estate
-                </h1>
-                <h1 className="font-inter font-normal text-[14px] leading-[16px] text-[#A6B2CD]">
-                  BTC
-                </h1>
-              </div>
-              <div className="flex flex-col justify-between ml-[100px]">
-                <h1 className="font-inter font-semibold text-white text-[14px] leading-5">
-                  $6,000,000
-                </h1>
-                <h1 className="font-inter font-normal text-[14px] text-[#A6B2CD] leading-4">
-                  BTC 224,11
-                </h1>
-              </div>
-            </div>
-            <div className="flex flex-row">
-              <RealEstateIcon />
-              <div className="flex flex-col justify-between ml-[10px]">
-                <h1 className="font-inter font-semibold text-[14px] leading-5 text-white">
-                  Real Estate
-                </h1>
-                <h1 className="font-inter font-normal text-[14px] leading-[16px] text-[#A6B2CD]">
-                  BTC
-                </h1>
-              </div>
-              <div className="flex flex-col justify-between ml-[100px]">
-                <h1 className="font-inter font-semibold text-white text-[14px] leading-5">
-                  $6,000,000
-                </h1>
-                <h1 className="font-inter font-normal text-[14px] text-[#A6B2CD] leading-4">
-                  BTC 224,11
-                </h1>
-              </div>
-            </div>
-            <div className="flex flex-row">
-              <RealEstateIcon />
-              <div className="flex flex-col justify-between ml-[10px]">
-                <h1 className="font-inter font-semibold text-[14px] leading-5 text-white">
-                  Real Estate
-                </h1>
-                <h1 className="font-inter font-normal text-[14px] leading-[16px] text-[#A6B2CD]">
-                  BTC
-                </h1>
-              </div>
-              <div className="flex flex-col justify-between ml-[100px]">
-                <h1 className="font-inter font-semibold text-white text-[14px] leading-5">
-                  $6,000,000
-                </h1>
-                <h1 className="font-inter font-normal text-[14px] text-[#A6B2CD] leading-4">
-                  BTC 224,11
-                </h1>
-              </div>
-            </div>
-            <div className="h-[2px] w-[336px] bg-[#F5FAFF] mt-[19px]"></div>
+            ))}
+            <div className="h-[2px] w-full bg-[#F5FAFF] mt-4"></div>
             <div className="flex flex-row justify-between">
-              <h1 className="font-inter font-normal text-[14px] leading-5 text-white">
+              <h1 className="font-inter font-normal text-sm lg:text-base text-white">
                 Total Balance
               </h1>
-              <h1 className="font-inter font-semibold text-[14px] leading-5 text-white">
-                USD 10.166.062
+              <h1 className="font-inter font-semibold text-sm lg:text-base text-white">
+                USD 10,166,062
               </h1>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex mt-[30px]">
+
+      <div className="flex flex-col lg:flex-row mt-8 lg:mt-[30px]">
         <div className="flex flex-col">
           <Breadcrumb pageName="Treasury Balance by Assets" />
-          <div className="w-[680px] h-[218px] bg-gradient-to-b from-[#3636361F] to-[#D9D9D91F] rounded-[12px] border border-[#3D3D3D]">
-            <div className="flex m-[25px] justify-between">
+          <div className="w-full  lg:w-[680px] h-auto lg:h-[218px] bg-gradient-to-b from-[#3636361F] to-[#D9D9D91F] rounded-[12px] border border-[#3D3D3D]">
+            <div className="flex flex-col sm:flex-row border p-6 lg:m-[25px] justify-between">
               <DonutChartIcon />
-              <div className=" mt-[33px] space-y-[11px]">
-                <div className="flex flex-row items-center justify-center  gap-[10px]">
-                  <div className="h-[14px] w-[14px] bg-[#FFE9A4] rounded-[4px]"></div>
-                  <h1 className="font-poppins font-normal text-[14px] leading-[21px] text-[#ECF0F1]">
+              <div className="mt-6 lg:mt-[33px] space-y-3 lg:space-y-[11px]">
+                <div className="flex items-center gap-2.5 lg:gap-[10px]">
+                  <div className="h-3.5 w-3.5 lg:h-[14px] lg:w-[14px] bg-[#FFE9A4] rounded-[4px]"></div>
+                  <h1 className="font-poppins font-normal text-sm lg:text-[14px] leading-[21px] text-[#ECF0F1]">
                     Real Estate
                   </h1>
                 </div>
-                <div className="flex flex-row items-center  gap-[10px]">
-                  <div className="h-[14px] w-[14px] bg-[#000000] rounded-[4px]"></div>
-                  <h1 className="font-poppins font-normal text-[14px] leading-[21px] text-[#ECF0F1]">
+                <div className="flex items-center gap-2.5 lg:gap-[10px]">
+                  <div className="h-3.5 w-3.5 lg:h-[14px] lg:w-[14px] bg-[#000000] rounded-[4px]"></div>
+                  <h1 className="font-poppins font-normal text-sm lg:text-[14px] leading-[21px] text-[#ECF0F1]">
                     Startups
                   </h1>
                 </div>
-                <div className="flex flex-row items-center  gap-[10px]">
-                  <div className="h-[14px] w-[14px] bg-[#838483] rounded-[4px]"></div>
-                  <h1 className="font-poppins font-normal text-[14px] leading-[21px] text-[#ECF0F1]">
+                <div className="flex items-center gap-2.5 lg:gap-[10px]">
+                  <div className="h-3.5 w-3.5 lg:h-[14px] lg:w-[14px] bg-[#838483] rounded-[4px]"></div>
+                  <h1 className="font-poppins font-normal text-sm lg:text-[14px] leading-[21px] text-[#ECF0F1]">
                     Businesses
                   </h1>
                 </div>
-                <div className="flex flex-row items-center ] gap-[10px]">
-                  <div className="h-[14px] w-[14px] bg-[#FFFFFF] rounded-[4px]"></div>
-                  <h1 className="font-poppins font-normal text-[14px] leading-[21px] text-[#ECF0F1]">
+                <div className="flex items-center gap-2.5 lg:gap-[10px]">
+                  <div className="h-3.5 w-3.5 lg:h-[14px] lg:w-[14px] bg-[#FFFFFF] rounded-[4px]"></div>
+                  <h1 className="font-poppins font-normal text-sm lg:text-[14px] leading-[21px] text-[#ECF0F1]">
                     Crypto
                   </h1>
                 </div>
               </div>
             </div>
-            <div></div>
           </div>
-          {/* <DonutChart /> */}
         </div>
 
-        <div className="flex flex-col ml-[9.05px]">
-          <div className="flex flex-row justify-between items-center">
-            <h1 className="font-inter font-semibold text-[20px] leading-[24.2px] text-white">
-              Last Aquired Asset
+        <div className="flex flex-col mt-4 lg:mt-0 lg:ml-[9.05px]">
+          <div className="flex justify-between items-center">
+            <h1 className="font-inter font-semibold text-lg lg:text-[20px] leading-[24.2px] text-white">
+              Last Acquired Asset
             </h1>
-            <div className="flex gap-[16px]">
-              <IoIosArrowDropleftCircle className="h-[31.11px] w-[31.11px] text-white" />
-              <IoIosArrowDroprightCircle className="h-[31.11px] w-[31.11px] text-[#FFE9A4]" />
+            <div className="flex gap-4 lg:gap-[16px]">
+              <IoIosArrowDropleftCircle className="h-8 w-8 lg:h-[31.11px] lg:w-[31.11px] text-white" />
+              <IoIosArrowDroprightCircle className="h-8 w-8 lg:h-[31.11px] lg:w-[31.11px] text-[#FFE9A4]" />
             </div>
           </div>
           <div
-            className="w-[393.94px] h-[241.11px] mt-[12px] bg-cover bg-center rounded-[7.78px]  flex flex-col justify-between"
+            className="w-full lg:w-[393.94px] h-auto lg:h-[241.11px] mt-3 lg:mt-[12px] bg-cover bg-center rounded-lg lg:rounded-[7.78px] flex flex-col justify-between"
             style={{ backgroundImage: `url(${benarHouse})` }}
           >
-            <div className="flex flex-col mt-[17.83px] ml-[13.95px]">
-              <div className="flex">
-                <div className="flex h-[23.72px] w-[91.22px] rounded-[97.22px] bg-[#FFFFFF70] justify-center items-center ">
-                  <p className="font-inter font-bold text-[11.67px] leading-[14.12px] text-white">
+            <div className="flex flex-col mt-4 lg:mt-[17.83px] ml-4 lg:ml-[13.95px]">
+              <div className="flex space-x-2 lg:space-x-4">
+                <div className="flex h-6 lg:h-[23.72px] w-[50%] lg:w-[91.22px] rounded-full bg-[#FFFFFF70] justify-center items-center">
+                  <p className="font-inter font-bold text-xs lg:text-[11.67px] leading-[14.12px] text-white">
                     Real Estate
                   </p>
                 </div>
-                <div className="flex justify-center items-center h-[23.72px] w-[78.22px] rounded-[97.22px] bg-[#FFFFFF70]">
-                  <p className="font-inter font-bold text-[11.67px] leading-[14.12px] text-white">
+                <div className="flex justify-center items-center h-6 lg:h-[23.72px] w-[50%] lg:w-[78.22px] rounded-full bg-[#FFFFFF70]">
+                  <p className="font-inter font-bold text-xs lg:text-[11.67px] leading-[14.12px] text-white">
                     Featured
                   </p>
                 </div>
               </div>
-              <div className="mt-[85.83px]">
-                <p className="font-inter font-bold text-[24px] leading-[36px] text-white">
+              <div className="mt-12 lg:mt-[85.83px]">
+                <p className="font-inter font-bold text-lg lg:text-[24px] leading-[36px] text-white">
                   Pualing Benar House
                 </p>
               </div>
               <div>
-                <p className="font-inter font-medium text-[12px] leading-[14.52px] text-white">
+                <p className="font-inter font-medium text-xs lg:text-[12px] leading-[14.52px] text-white">
                   East utjo Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.{' '}
+                  typesetting industry.
                 </p>
               </div>
-              <div className="flex mt-[17px] gap-[6.88px]">
-                <FaLocationDot className="w-[18.34px] h-[18.34px] text-white" />
-                <p className="font-inter font-medium text-[13.76px] leading-[16.65px] text-white">
+              <div className="flex mt-4 lg:mt-[17px] gap-2 lg:gap-[6.88px]">
+                <FaLocationDot className="w-4 lg:w-[18.34px] h-4 lg:h-[18.34px] text-white" />
+                <p className="font-inter font-medium text-sm lg:text-[13.76px] leading-[16.65px] text-white">
                   East utjo Mabar, East Java
                 </p>
               </div>

@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardBody, CardHeader } from '@material-tailwind/react';
 import Chart from 'react-apexcharts';
 
 const chartData = [11111110, 1200000, 1000000, 5000000, 20000000];
 
-const chartConfig = (data) => ({
+const chartConfig = (data, chartHeight) => ({
   type: 'area',
-  height: 240,
+  height: chartHeight, // Set height dynamically
+  width: '100%', // Ensure the chart width is responsive
   series: [
     {
       name: 'Value',
@@ -18,6 +19,25 @@ const chartConfig = (data) => ({
       toolbar: {
         show: false,
       },
+      // Responsive options
+      responsive: [
+        {
+          breakpoint: 768,
+          options: {
+            chart: {
+              height: 200, // Adjust height for small screens
+            },
+          },
+        },
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              height: 160, // Adjust height for extra small screens
+            },
+          },
+        },
+      ],
     },
     dataLabels: {
       enabled: false,
@@ -98,22 +118,43 @@ const chartConfig = (data) => ({
 
 export default function SplineAreaChart() {
   const [selectedTimeRange, setSelectedTimeRange] = useState('1M');
+  const [chartHeight, setChartHeight] = useState(240);
+
+  useEffect(() => {
+    const updateChartHeight = () => {
+      const windowWidth = window.innerWidth;
+      if (windowWidth < 480) {
+        setChartHeight(160);
+      } else if (windowWidth < 768) {
+        setChartHeight(200);
+      } else {
+        setChartHeight(240);
+      }
+    };
+
+    updateChartHeight();
+    window.addEventListener('resize', updateChartHeight);
+
+    return () => {
+      window.removeEventListener('resize', updateChartHeight);
+    };
+  }, []);
 
   return (
-    <Card className="border-[#444444] w-[680px] bg-gradient-to-t from-[#1F1F1F] to-[#0A0A0A] ">
-      <CardHeader className="flex flex-col gap-4  justify-between md:flex-row md:items-center rounded-none mt">
-        <div className="text-white flex justify-between  items-center w-full bg-[#0A0A0A]">
+    <Card className="border-[#444444] w-full bg-gradient-to-t from-[#1F1F1F] to-[#0A0A0A]">
+      <CardHeader className="flex flex-col gap-4 justify-between md:flex-row md:items-center rounded-none">
+        <div className="text-white flex justify-between items-center w-full bg-[#0A0A0A]">
           <h1 className="font-inter font-normal text-[14px] py-2 leading-[14px] text-white">
             Current Value
           </h1>
-          <div className="flex space-x-4 ">
+          <div className="flex space-x-4">
             {['1H', '24H', '1W', '1M', '1Y', 'ALL'].map((range) => (
               <button
                 key={range}
-                className={`font-inter font-normal  text-white   text-[14px] leading-[14px] ${
+                className={`font-inter font-normal text-white text-[14px] leading-[14px] ${
                   selectedTimeRange === range
-                    ? 'font-bold font-inter  text-[#edd078]'
-                    : 'text-white '
+                    ? 'font-bold text-[#edd078]'
+                    : 'text-white'
                 }`}
                 onClick={() => setSelectedTimeRange(range)}
               >
@@ -123,9 +164,9 @@ export default function SplineAreaChart() {
           </div>
         </div>
       </CardHeader>
-      <CardBody className="px-2 pb-0 ">
+      <CardBody className="px-2 pb-0">
         <h2 className="text-white text-[24px] mb-4">USD 10,166,062</h2>
-        <Chart {...chartConfig(chartData)} />
+        <Chart {...chartConfig(chartData, chartHeight)} />
       </CardBody>
     </Card>
   );
