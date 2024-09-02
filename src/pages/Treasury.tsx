@@ -61,8 +61,11 @@ const Card = ({ heading1, heading2, icon }) => {
 const CardRow = () => {
   return (
     <div>
-      <Breadcrumb pageName="Summary" />
-      <div className="flex space-x-5">
+      <h1 className="font-inter font-semibold text-white text-[20px] leading-[28px] mb-6 ">
+        Summary
+      </h1>
+      {/* <Breadcrumb pageName="Summary" /> */}
+      <div className="flex  flex-wrap gap-5">
         {cardData.map((card, index) => (
           <Card
             key={index}
