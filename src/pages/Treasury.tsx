@@ -134,35 +134,37 @@ const CardRow = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row mt-8 lg:mt-[30px] border">
-        <div className="flex flex-col">
-          <Breadcrumb pageName="Treasury Balance by Assets" />
-          {/* <h1>Treasury Balance by Assets</h1> */}
-          <div className="w-full  lg:w-[680px] h-auto lg:h-[218px] bg-gradient-to-b from-[#3636361F] to-[#D9D9D91F] rounded-[12px] border border-[#3D3D3D]">
-            <div className="flex flex-col sm:flex-row border p-6 lg:m-[25px] justify-between">
+      <div className="flex flex-col lg:flex-row mt-8 lg:mt-[30px] lg:justify-between  border-2 border-green-950">
+        <div className="flex flex-col border-2 border-red-950  ">
+          {/* <Breadcrumb pageName="Treasury Balance by Assets" /> */}
+          <h1 className="font-inter font-semibold text-[20px] text-white leading-5 ">
+            Treasury Balance by Assets
+          </h1>
+          <div className="w-full lg:max-w-[100%] h-auto lg:h-[24vh] bg-gradient-to-b from-[#3636361F] to-[#D9D9D91F] rounded-[12px] border border-[#3D3D3D]">
+            <div className="flex flex-col sm:flex-row border-2 p-6 justify-between">
               <DonutChartIcon />
-              <div className="mt-6 lg:mt-[33px] space-y-3 lg:space-y-[11px]">
-                <div className="flex items-center gap-2.5 lg:gap-[10px]">
-                  <div className="h-3.5 w-3.5 lg:h-[14px] lg:w-[14px] bg-[#FFE9A4] rounded-[4px]"></div>
-                  <h1 className="font-poppins font-normal text-sm lg:text-[14px] leading-[21px] text-[#ECF0F1]">
+              <div className="mt-6 lg:mt-[2vh] space-y-3 lg:space-y-[1vh]">
+                <div className="flex items-center gap-2.5 lg:gap-[1vw]">
+                  <div className="h-3.5 w-3.5 lg:h-[2vh] lg:w-[2vh] bg-[#FFE9A4] rounded-[4px]"></div>
+                  <h1 className="font-poppins font-normal text-sm lg:text-[1vw] leading-[2vh] text-[#ECF0F1]">
                     Real Estate
                   </h1>
                 </div>
-                <div className="flex items-center gap-2.5 lg:gap-[10px]">
-                  <div className="h-3.5 w-3.5 lg:h-[14px] lg:w-[14px] bg-[#000000] rounded-[4px]"></div>
-                  <h1 className="font-poppins font-normal text-sm lg:text-[14px] leading-[21px] text-[#ECF0F1]">
+                <div className="flex items-center gap-2.5 lg:gap-[1vw]">
+                  <div className="h-3.5 w-3.5 lg:h-[2vh] lg:w-[2vh] bg-[#000000] rounded-[4px]"></div>
+                  <h1 className="font-poppins font-normal text-sm lg:text-[1vw] leading-[2vh] text-[#ECF0F1]">
                     Startups
                   </h1>
                 </div>
-                <div className="flex items-center gap-2.5 lg:gap-[10px]">
-                  <div className="h-3.5 w-3.5 lg:h-[14px] lg:w-[14px] bg-[#838483] rounded-[4px]"></div>
-                  <h1 className="font-poppins font-normal text-sm lg:text-[14px] leading-[21px] text-[#ECF0F1]">
+                <div className="flex items-center gap-2.5 lg:gap-[1vw]">
+                  <div className="h-3.5 w-3.5 lg:h-[2vh] lg:w-[2vh] bg-[#838483] rounded-[4px]"></div>
+                  <h1 className="font-poppins font-normal text-sm lg:text-[1vw] leading-[2vh] text-[#ECF0F1]">
                     Businesses
                   </h1>
                 </div>
-                <div className="flex items-center gap-2.5 lg:gap-[10px]">
-                  <div className="h-3.5 w-3.5 lg:h-[14px] lg:w-[14px] bg-[#FFFFFF] rounded-[4px]"></div>
-                  <h1 className="font-poppins font-normal text-sm lg:text-[14px] leading-[21px] text-[#ECF0F1]">
+                <div className="flex items-center gap-2.5 lg:gap-[1vw]">
+                  <div className="h-3.5 w-3.5 lg:h-[2vh] lg:w-[2vh] bg-[#FFFFFF] rounded-[4px]"></div>
+                  <h1 className="font-poppins font-normal text-sm lg:text-[1vw] leading-[2vh] text-[#ECF0F1]">
                     Crypto
                   </h1>
                 </div>
@@ -171,7 +173,7 @@ const CardRow = () => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-4 lg:mt-0 lg:ml-[9.05px]">
+        <div className="flex flex-col mt-4 lg:mt-0 lg:ml-[9.05px] border-2 border-yellow-400">
           <div className="flex justify-between items-center">
             <h1 className="font-inter font-semibold text-lg lg:text-[20px] leading-[24.2px] text-white">
               Last Acquired Asset
@@ -182,7 +184,7 @@ const CardRow = () => {
             </div>
           </div>
           <div
-            className="w-full lg:w-[393.94px] h-auto lg:h-[241.11px] mt-3 lg:mt-[12px] bg-cover bg-center rounded-lg lg:rounded-[7.78px] flex flex-col justify-between"
+            className="w-full lg:max-w-[393.94px] h-auto lg:h-[241.11px] mt-3 lg:mt-[12px] bg-cover bg-center rounded-lg lg:rounded-[7.78px] flex flex-col justify-between"
             style={{ backgroundImage: `url(${benarHouse})` }}
           >
             <div className="flex flex-col mt-4 lg:mt-[17.83px] ml-4 lg:ml-[13.95px]">
