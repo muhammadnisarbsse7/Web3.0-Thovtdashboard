@@ -76,12 +76,13 @@ const CardRow = () => {
         ))}
       </div>
 
-      <div className="flex flex-col lg:flex-row mt-6 lg:mt-12 gap-6 lg:gap-8">
-        <div className="flex-1">
+      <div className="flex flex-col lg:flex-row mt-6 lg:mt-12 gap-6 lg:gap-10 border-4 border-green-950">
+        <div className="flex-1 border">
           <Breadcrumb pageName="Treasury Growth" />
           <ChartThree />
         </div>
-        <div className="flex-1 flex flex-col space-y-5">
+
+        <div className="flex-1 flex flex-col space-y-5 border-2 border-yellow-500">
           <div className="flex items-center justify-between lg:justify-start lg:space-x-8 border">
             {/* <Breadcrumb pageName="Treasury Portfolio" /> */}
             <h1 className="font inter font-semibold text-[20px] text-white leading-5 ">
@@ -120,21 +121,23 @@ const CardRow = () => {
               </div>
             ))}
             <div className="h-[2px] w-full bg-[#F5FAFF] mt-4"></div>
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-row justify-between ">
               <h1 className="font-inter font-normal text-sm lg:text-base text-white">
                 Total Balance
               </h1>
               <h1 className="font-inter font-semibold text-sm lg:text-base text-white">
                 USD 10,166,062
               </h1>
+              <h1></h1>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row mt-8 lg:mt-[30px]">
+      <div className="flex flex-col lg:flex-row mt-8 lg:mt-[30px] border">
         <div className="flex flex-col">
           <Breadcrumb pageName="Treasury Balance by Assets" />
+          {/* <h1>Treasury Balance by Assets</h1> */}
           <div className="w-full  lg:w-[680px] h-auto lg:h-[218px] bg-gradient-to-b from-[#3636361F] to-[#D9D9D91F] rounded-[12px] border border-[#3D3D3D]">
             <div className="flex flex-col sm:flex-row border p-6 lg:m-[25px] justify-between">
               <DonutChartIcon />
