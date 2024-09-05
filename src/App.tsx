@@ -44,7 +44,7 @@ function App() {
           }
         />
         <Route
-          path="/treasury"
+          path="/Treasury"
           element={
             <>
               <PageTitle title="Treasury" />
