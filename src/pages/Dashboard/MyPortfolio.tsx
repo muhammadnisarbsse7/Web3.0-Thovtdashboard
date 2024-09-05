@@ -29,10 +29,10 @@ const ECommerce: React.FC = () => {
       <div className="flex flex-row   w-[1144px] gap-12">
         {/* Personal dashboard card  */}
 
-        <div className="flex flex-col">
+        <div className="flex flex-col border">
           <Breadcrumb pageName="Personal Dashboard" />
 
-          <div className="flex flex-wrap gap-4 md:gap-4 w-full max-w-[689px] 2xl:gap-7.5">
+          <div className="flex gap-4 md:gap-4 w-full 2xl:gap-7.5 border-4 border-red-950">
             <CardDataStats
               title="Total Dividends"
               total="$156.97"

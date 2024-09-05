@@ -16,13 +16,13 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
 }) => {
   return (
     <div
-      className="rounded-xl border-[#3D3D3D] bg-gradient-to-b from-[#262626] to-[#25252500] py-4 px-6 shadow-default dark:border-strokedark dark:bg-boxdark 
+      className="rounded-xl border-4 lg:px-12 border-[#3D3D3D] bg-gradient-to-b from-[#262626] to-[#25252500] py-4 px-6 shadow-default dark:border-strokedark dark:bg-boxdark 
                     sm:px-4 sm:py-3
                     md:px-6 md:py-4
-                    lg:px-[18px] lg:py-4"
+                     lg:py-4"
     >
-      <div className="flex items-start justify-start gap-6 sm:gap-4 md:gap-6 lg:gap-6">
-        <div className="flex h-14 w-12 items-center justify-center sm:h-12 sm:w-10 md:h-14 md:w-12 lg:h-16 lg:w-14">
+      <div className="flex items-start justify-start gap-6 border sm:gap-4 md:gap-6 lg:gap-6">
+        <div className="flex h-14 w-12 items-start justify-center sm:h-12 sm:w-10 md:h-14 md:w-12 lg:h-16 lg:w-14">
           {children}
         </div>
         <div className="">
