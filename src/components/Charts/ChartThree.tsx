@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Card, CardBody, CardHeader } from '@material-tailwind/react';
 import Chart from 'react-apexcharts';
+import { Colors } from 'chart.js';
 
-const chartData = [11111110, 1200000, 1000000, 5000000, 20000000];
+const chartData = [1111110, 11500000, 1000000, 15000000, 2000000];
 
-const chartConfig = (data, chartHeight) => ({
+const chartConfig = (data, chartHeight, chartWidth) => ({
   type: 'area',
-  height: chartHeight, // Set height dynamically
-  width: '100%', // Ensure the chart width is responsive
+  height: chartHeight,
+  width: chartWidth,
   series: [
     {
       name: 'Value',
@@ -19,13 +20,12 @@ const chartConfig = (data, chartHeight) => ({
       toolbar: {
         show: false,
       },
-      // Responsive options
       responsive: [
         {
           breakpoint: 768,
           options: {
             chart: {
-              height: 200, // Adjust height for small screens
+              height: 200,
             },
           },
         },
@@ -33,7 +33,7 @@ const chartConfig = (data, chartHeight) => ({
           breakpoint: 480,
           options: {
             chart: {
-              height: 160, // Adjust height for extra small screens
+              height: 160,
             },
           },
         },
@@ -80,9 +80,9 @@ const chartConfig = (data, chartHeight) => ({
       },
     },
     grid: {
-      show: false,
-      borderColor: '#dddddd',
-      strokeDashArray: 5,
+      show: true,
+      borderColor: 'rgba(226, 241, 255, 0.2)',
+      strokeDashArray: 6,
       padding: {
         top: 5,
         right: 20,
@@ -119,31 +119,36 @@ const chartConfig = (data, chartHeight) => ({
 export default function SplineAreaChart() {
   const [selectedTimeRange, setSelectedTimeRange] = useState('1M');
   const [chartHeight, setChartHeight] = useState(240);
+  const [chartWidth, setChartWidth] = useState('130%');
 
   useEffect(() => {
-    const updateChartHeight = () => {
+    const updateChartSize = () => {
       const windowWidth = window.innerWidth;
+
       if (windowWidth < 480) {
         setChartHeight(160);
+        setChartWidth('100%');
       } else if (windowWidth < 768) {
         setChartHeight(200);
+        setChartWidth('100%');
       } else {
         setChartHeight(240);
+        setChartWidth('140%');
       }
     };
 
-    updateChartHeight();
-    window.addEventListener('resize', updateChartHeight);
+    updateChartSize();
+    window.addEventListener('resize', updateChartSize);
 
     return () => {
-      window.removeEventListener('resize', updateChartHeight);
+      window.removeEventListener('resize', updateChartSize);
     };
   }, []);
 
   return (
-    <Card className="border-[#444444] w-full bg-gradient-to-t from-[#1F1F1F] to-[#0A0A0A]">
+    <Card className="border-[#444444] w-full bg-gradient-to-b from-[#1F1F1F] to-[#0A0A0A]">
       <CardHeader className="flex flex-col gap-4 justify-between md:flex-row md:items-center rounded-none">
-        <div className="text-white flex justify-between items-center w-full bg-[#0A0A0A]">
+        <div className="text-white flex justify-between items-center w-full bg-[#1F1F1F] ">
           <h1 className="font-inter font-normal text-[14px] py-2 leading-[14px] text-white">
             Current Value
           </h1>
@@ -165,8 +170,8 @@ export default function SplineAreaChart() {
         </div>
       </CardHeader>
       <CardBody className="px-2 pb-0">
-        <h2 className="text-white text-[24px] mb-4">USD 10,166,062</h2>
-        <Chart {...chartConfig(chartData, chartHeight)} />
+        <h2 className="text-white text-[24px] ml-3 mb-4">USD 10,166,062</h2>
+        <Chart {...chartConfig(chartData, chartHeight, chartWidth)} />
       </CardBody>
     </Card>
   );

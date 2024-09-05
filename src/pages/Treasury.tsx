@@ -76,14 +76,17 @@ const CardRow = () => {
         ))}
       </div>
 
-      <div className="flex flex-col lg:flex-row mt-6 lg:mt-12 gap-6 lg:gap-10 border-4 border-green-950">
-        <div className="flex-1 border">
+      <div className="flex flex-col lg:flex-row mt-6 lg:mt-12 gap-6 lg:gap-10 ">
+        <div className="flex-1 ">
           <Breadcrumb pageName="Treasury Growth" />
+          {/* <h1 className="font-inter font-semibold text-white text-[20px] leading-5 mb-6">
+            Traesury Growth
+          </h1> */}
           <ChartThree />
         </div>
 
-        <div className="flex-1 flex flex-col space-y-5 border-2 border-yellow-500">
-          <div className="flex items-center justify-between lg:justify-start lg:space-x-8 border">
+        <div className="flex-1 flex flex-col space-y-5  ">
+          <div className="flex items-center justify-between lg:justify-start lg:space-x-8 ">
             {/* <Breadcrumb pageName="Treasury Portfolio" /> */}
             <h1 className="font inter font-semibold text-[20px] text-white leading-5 ">
               Treasury Portfolio
@@ -98,7 +101,7 @@ const CardRow = () => {
               Chart
             </div>
           </div>
-          <div className="space-y-4 border">
+          <div className="space-y-4 ">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="flex flex-row items-center">
                 <RealEstateIcon />
@@ -128,22 +131,22 @@ const CardRow = () => {
               <h1 className="font-inter font-semibold text-sm lg:text-base text-white">
                 USD 10,166,062
               </h1>
-              <h1></h1>
+              {/* <h1></h1> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row mt-8 lg:mt-[30px] lg:justify-between  border-2 border-green-950">
-        <div className="flex flex-col border-2 border-red-950  ">
+      <div className="flex flex-col lg:flex-row mt-8 lg:mt-[30px] lg:justify-between ">
+        <div className="flex flex-col lg:h-auto lg:w-[789px] ">
           {/* <Breadcrumb pageName="Treasury Balance by Assets" /> */}
-          <h1 className="font-inter font-semibold text-[20px] text-white leading-5 ">
+          <h1 className="font-inter font-semibold text-[20px] text-white leading-5 mb-6 ">
             Treasury Balance by Assets
           </h1>
-          <div className="w-full lg:max-w-[100%] h-auto lg:h-[24vh] bg-gradient-to-b from-[#3636361F] to-[#D9D9D91F] rounded-[12px] border border-[#3D3D3D]">
-            <div className="flex flex-col sm:flex-row border-2 p-6 justify-between">
+          <div className="w-full lg:max-w-[100%] h-auto lg:h-auto bg-gradient-to-b from-[#3636361F] to-[#D9D9D91F] rounded-[12px] border border-[#3D3D3D]">
+            <div className="flex flex-col sm:flex-row  p-6 justify-between">
               <DonutChartIcon />
-              <div className="mt-6 lg:mt-[2vh] space-y-3 lg:space-y-[1vh]">
+              <div className="mt-6 lg:mt-[2vh] space-y-3 lg:space-y-[2vh] ">
                 <div className="flex items-center gap-2.5 lg:gap-[1vw]">
                   <div className="h-3.5 w-3.5 lg:h-[2vh] lg:w-[2vh] bg-[#FFE9A4] rounded-[4px]"></div>
                   <h1 className="font-poppins font-normal text-sm lg:text-[1vw] leading-[2vh] text-[#ECF0F1]">
@@ -173,7 +176,7 @@ const CardRow = () => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-4 lg:mt-0 lg:ml-[9.05px] border-2 border-yellow-400">
+        <div className="flex flex-col mt-4 lg:mt-0 lg:ml-[9.05px]">
           <div className="flex justify-between items-center">
             <h1 className="font-inter font-semibold text-lg lg:text-[20px] leading-[24.2px] text-white">
               Last Acquired Asset
