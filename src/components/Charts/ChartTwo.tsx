@@ -140,48 +140,53 @@ export default function BarChart() {
   };
 
   return (
-    <Card className="border-[#444444] w-[682px] bg-gradient-to-t from-[#1F1F1F] to-[#0A0A0A]">
-      <CardHeader
-        floated={true}
-        shadow={false}
-        color="transparent"
-        className="flex flex-col gap-4 rounded-none justify-between md:flex-row md:items-center"
-      >
-        <div className="w-max rounded-lg text-white">
-          <h1 className="font-inter font-bold text-[18px] text-white ml-[10px] leading-5">
-            Holder's Profit
-          </h1>
-        </div>
-        <div>
-          <select
-            value={selectedYear}
-            onChange={handleYearChange}
-            className="bg-[#323D4E] opacity-80 font-nunitoSans font-semibold text-[10px] justify-center leading-[10px] text-white px-3 py-[6px] rounded-lg"
-          >
-            <option
-              value="2024"
-              className="border-2 font-nunitoSans font-semibold text-[10px] text-white justify-center leading-[10px] "
+    <>
+      <h1 className="font-inter font-semibold text-[20px] text-white leading-5">
+        Profit
+      </h1>
+      <Card className="border-[#444444] w-full bg-gradient-to-b  from-[#1F1F1F] to-[#0A0A0A]">
+        <CardHeader
+          floated={true}
+          shadow={false}
+          color="transparent"
+          className="flex flex-col gap-4 rounded-none justify-between md:flex-row md:items-center"
+        >
+          <div className="w-max rounded-lg text-white">
+            <h1 className="font-inter font-bold text-[18px] text-white ml-[10px] leading-5">
+              Holder's Profit
+            </h1>
+          </div>
+          <div>
+            <select
+              value={selectedYear}
+              onChange={handleYearChange}
+              className="bg-[#323D4E] opacity-80 font-nunitoSans font-semibold text-[10px] justify-center leading-[10px] text-white px-3 py-[6px] rounded-lg"
             >
-              2024
-            </option>
-            <option
-              value="2025"
-              className="border-2 font-nunitoSans font-semibold text-[10px] text-white justify-center leading-[10px]  "
-            >
-              2025
-            </option>
-            {/* <option
+              <option
+                value="2024"
+                className="border-2 font-nunitoSans font-semibold text-[10px] text-white justify-center leading-[10px] "
+              >
+                2024
+              </option>
+              <option
+                value="2025"
+                className="border-2 font-nunitoSans font-semibold text-[10px] text-white justify-center leading-[10px]  "
+              >
+                2025
+              </option>
+              {/* <option
               value="2026"
               className="border-2 font-nunitoSans font-semibold text-[10px] text-white justify-center leading-[10px] "
             >
-              2026
+            2026
             </option> */}
-          </select>
-        </div>
-      </CardHeader>
-      <CardBody className="px-2 pb-0 ">
-        <Chart {...chartConfig(chartData[selectedYear])} />
-      </CardBody>
-    </Card>
+            </select>
+          </div>
+        </CardHeader>
+        <CardBody className="px-2 pt-0 ">
+          <Chart {...chartConfig(chartData[selectedYear])} />
+        </CardBody>
+      </Card>
+    </>
   );
 }

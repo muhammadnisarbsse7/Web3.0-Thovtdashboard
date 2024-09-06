@@ -16,20 +16,39 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
 }) => {
   return (
     <div
-      className="rounded-xl border-4 lg:px-12 border-[#3D3D3D] bg-gradient-to-b from-[#262626] to-[#25252500] py-4 px-6 shadow-default dark:border-strokedark dark:bg-boxdark 
-                    sm:px-4 sm:py-3
-                    md:px-6 md:py-4
-                     lg:py-4"
+      className="rounded-xl border border-[#3D3D3D] bg-gradient-to-b from-[#262626] to-[#25252500] shadow-default dark:border-strokedark dark:bg-boxdark 
+                 w-full flex-grow p-4"
+      style={{
+        padding: '2vw',
+        maxWidth: '30%',
+        minWidth: '250px',
+      }}
     >
-      <div className="flex items-start justify-start gap-6 border sm:gap-4 md:gap-6 lg:gap-6">
-        <div className="flex h-14 w-12 items-start justify-center sm:h-12 sm:w-10 md:h-14 md:w-12 lg:h-16 lg:w-14">
+      <div className="flex items-start justify-start gap-4 ">
+        <div
+          className="flex items-start justify-center"
+          style={{
+            height: 'calc(2.5rem + 1vw)',
+            width: 'calc(2.5rem + 1vw)',
+          }}
+        >
           {children}
         </div>
-        <div className="">
-          <h4 className="font-plusJakartaSans font-semibold text-white text-lg sm:text-base md:text-lg lg:text-xl leading-tight">
+        <div>
+          <h4
+            className="font-plusJakartaSans font-semibold text-white leading-tight"
+            style={{
+              fontSize: 'clamp(1rem, 2vw, 1.5rem)',
+            }}
+          >
             {total}
           </h4>
-          <h1 className="font-plusJakartaSans font-medium text-sm text-[#B9B9B9] leading-[18px] sm:text-xs md:text-sm lg:text-base">
+          <h1
+            className="font-plusJakartaSans font-medium text-[#B9B9B9]"
+            style={{
+              fontSize: 'clamp(0.875rem, 1.5vw, 1rem)',
+            }}
+          >
             {title}
           </h1>
         </div>

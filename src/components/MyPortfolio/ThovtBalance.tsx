@@ -1,16 +1,11 @@
-// src/components/CarouselCard.tsx
-
 import React from 'react';
-
-// Replace 'bgImage' with your actual image path
 import thovtBalance from '../../images/cards/thovt-balance.png';
 import { PopupIcon } from '../../Svg/PopuoIcon';
 
-// Define the functional component using TypeScript
 const CarouselCard: React.FC = () => {
   return (
     <div
-      className="w-72 h-48  bg-cover bg-center rounded-lg p-5 flex flex-col justify-between"
+      className="w-full h-48  bg-cover bg-center rounded-lg p-5 flex flex-col justify-between"
       style={{ backgroundImage: `url(${thovtBalance})` }}
     >
       <div>
@@ -43,7 +38,6 @@ const CarouselCard: React.FC = () => {
             +14.6%
           </span>
           <PopupIcon />
-          {/* <span className="ml-2">↑</span>  */}
         </div>
       </div>
     </div>
