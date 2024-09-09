@@ -67,11 +67,11 @@ const CardLayout = ({ title1, title2, amount, icon }) => {
 
 const ThovtCardGrid = () => {
   return (
-    <main>
+    <main className="border-2 border-green-950 w-full">
       <h1 className="font-inter font-semibold text-[20px] text-white leading-5">
         Summary
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-[22px] border ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-[22px] border ">
         {cardData.map((card) => (
           <CardLayout
             key={card.id}
