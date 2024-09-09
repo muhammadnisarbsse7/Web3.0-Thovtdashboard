@@ -132,7 +132,7 @@ export default function SplineAreaChart() {
         setChartHeight(200);
         setChartWidth('100%');
       } else {
-        setChartHeight(240);
+        setChartHeight(180);
         setChartWidth('100%');
       }
     };

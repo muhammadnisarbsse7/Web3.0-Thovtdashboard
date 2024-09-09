@@ -37,7 +37,7 @@ const ListedData = () => {
         <h1 className="font-inter font-semibold text-[20px] text-white leading-5 ">
           Chains
         </h1>
-        <div className="max-w-[278.5px] mt-8 bg-gradient-to-t from-[#FFFFFF1A] to-[#FFFFFF1A] border border-[#363636] rounded-[16px] space-y-5 shadow-md py-8 flex flex-col items-center">
+        <div className="w-full sm:max-w-[278.5px] mt-8 bg-gradient-to-t from-[#FFFFFF1A] to-[#FFFFFF1A] border border-[#363636] rounded-[16px] space-y-5 shadow-md py-8 flex flex-col items-center">
           <div className="text-4xl mb-2">
             <PolygonIcon />
           </div>

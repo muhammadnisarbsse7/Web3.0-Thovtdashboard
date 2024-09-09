@@ -45,7 +45,7 @@ const cardData = [
 const CardLayout = ({ title1, title2, amount, icon }) => {
   return (
     <div className="bg-gradient-to-b from-[#262626] to-[#25252500] shadow-md rounded-lg px-4 flex flex-col ">
-      <div className="flex justify-between items-center  gap-36 pt-5">
+      <div className="flex justify-between items-center  gap-12 pt-5">
         <div className="flex flex-col gap-2">
           <h2 className="font-inter font-semibold text-[20px] text-white leading-5 ">
             {title1}
@@ -67,11 +67,11 @@ const CardLayout = ({ title1, title2, amount, icon }) => {
 
 const ThovtCardGrid = () => {
   return (
-    <main className="border-2 border-green-950 w-full">
+    <main className=" w-full">
       <h1 className="font-inter font-semibold text-[20px] text-white leading-5">
         Summary
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-[22px] border ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-[22px] ">
         {cardData.map((card) => (
           <CardLayout
             key={card.id}
