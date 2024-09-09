@@ -4,6 +4,7 @@ import ChartThree from '../components/Charts/ChartThree';
 import ThovtTokenChart from '../components/Charts/ThovtTokenChart';
 // import PortfolioChart from '../components/Charts/PortfolioChart';
 import ThovtTokenPriceChart from '../components/Charts/ThovtTokenPriceChart';
+import ThovtLineChart from '../components/Charts/ThovtLineChart';
 import CollectionFees from './FeesChart';
 import ListedData from '../components/ThovtListed';
 
@@ -29,7 +30,10 @@ const Thovt = () => {
           </div>
           {/* <ThovtListedCard /> */}
         </div>
-        <div>{/* <ChartThree /> */}</div>
+        <div>
+          {/* <ChartThree /> */}
+          <ThovtLineChart />
+        </div>
         <div>
           <ListedData />
         </div>

@@ -22,7 +22,7 @@ const ListedData = () => {
   ];
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-11">
       <div>
         <h1 className="font-inter font-semibold text-[20px] text-white leading-5 ">
           Listed

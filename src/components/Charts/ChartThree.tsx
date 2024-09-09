@@ -6,7 +6,7 @@ import { Colors } from 'chart.js';
 const chartData = [1111110, 11500000, 1000000, 15000000, 2000000];
 
 const chartConfig = (data, chartHeight, chartWidth) => ({
-  type: 'area',
+  type: 'line',
   height: chartHeight,
   width: chartWidth,
   series: [
@@ -170,7 +170,9 @@ export default function SplineAreaChart() {
         </div>
       </CardHeader>
       <CardBody className="px-2 pb-0">
-        <h2 className="text-white text-[24px] ml-3 mb-4">USD 10,166,062</h2>
+        <h2 className="font-semibold text-white text-[24px] ml-3 mb-4">
+          USD 10,166,062
+        </h2>
         <Chart {...chartConfig(chartData, chartHeight, chartWidth)} />
       </CardBody>
     </Card>
