@@ -4,8 +4,6 @@ import ChartThree from '../components/Charts/ChartThree';
 import { HoldersIcon } from '../Svg/HoldersIcon';
 import { MarketCapIcon } from '../Svg/MarketCapIcon';
 import { TreasuryBalanceIcon } from '../Svg/TreasuryBalIcon';
-import { DivideIcon } from '@heroicons/react/16/solid';
-import { DividedIcon } from '../Svg/DividedIcon';
 import { AprIcon } from '../Svg/AprIcon';
 import { ThovtIcon } from '../Svg/ThovtIcon';
 import { RealEstateIcon } from '../Svg/RealEstateIcon';
@@ -14,11 +12,9 @@ import { IoIosArrowDropleftCircle } from 'react-icons/io';
 import { IoIosArrowDroprightCircle } from 'react-icons/io';
 import benarHouse from '../images/cards/benar-house.png';
 import { FaLocationDot } from 'react-icons/fa6';
-import { LeftArrowIcon } from '../Svg/LeftArrowIcon';
-import { RightArrowIcon } from '../Svg/RightArrowIcon';
-
 import ProfileCard from '../components/ProfileCard';
 import DividentCards from '../components/DividentCards';
+import { DividendsIcon } from '../Svg/Dividends';
 
 // Data array containing heading values for each card
 const cardData = [
@@ -29,7 +25,7 @@ const cardData = [
     heading2: '$10.166.062',
     icon: <TreasuryBalanceIcon />,
   },
-  { heading1: 'Dividends', heading2: '$2.748.150', icon: <DividedIcon /> },
+  { heading1: 'Dividends', heading2: '$2.748.150', icon: <DividendsIcon /> },
   { heading1: 'APR', heading2: '70% APR', icon: <AprIcon /> },
   { heading1: '$THOVT', heading2: '$1.00', icon: <ThovtIcon /> },
 ];
@@ -64,7 +60,7 @@ const CardRow = () => {
       <h1 className="font-inter font-semibold text-white text-[20px] leading-[28px] mb-6 ">
         Summary
       </h1>
-      {/* <Breadcrumb pageName="Summary" /> */}
+
       <div className="flex  flex-wrap gap-5">
         {cardData.map((card, index) => (
           <Card
