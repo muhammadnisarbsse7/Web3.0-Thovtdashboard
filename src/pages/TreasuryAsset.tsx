@@ -138,7 +138,7 @@ const TreasuryAsset = () => {
               </div>
               <div className="flex rounded-[24px]  bg-[#FFE9A4]   gap-[1px] mt-[27px]">
                 <button
-                  onClick={() => handleButtonClick('All')}
+                  onClick={() => handleButtonClick('Partners')}
                   className={`px-6 rounded-[17px] ${
                     activeButton === 'All'
                       ? 'bg-[#FBF4F4] text-black border border-black py-1'
@@ -148,7 +148,7 @@ const TreasuryAsset = () => {
                   Partners
                 </button>
                 <button
-                  onClick={() => handleButtonClick('Active')}
+                  onClick={() => handleButtonClick('Owners')}
                   className={`px-5 rounded-[17px] ${
                     activeButton === 'Active'
                       ? 'bg-[#FBF4F4] text-black border border-black py-1'
@@ -158,7 +158,7 @@ const TreasuryAsset = () => {
                   Owners
                 </button>
                 <button
-                  onClick={() => handleButtonClick('Archive')}
+                  onClick={() => handleButtonClick('Activities')}
                   className={`px-4 rounded-[17px] ${
                     activeButton === 'Archive'
                       ? 'bg-[#FBF4F4] text-black border border-black py-1'
