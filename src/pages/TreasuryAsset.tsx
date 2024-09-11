@@ -19,7 +19,7 @@ const TreasuryAsset = () => {
 
   return (
     <>
-      <div className="grid-row flex flex-col  sm:grid sm:grid-cols-12 sm:gap-3">
+      <div className="grid-row flex flex-col  sm:grid sm:grid-cols-12 gap-3 sm:gap-3">
         <div className="grid sm:col-span-8 bg-[#151517] h-full rounded-3xl">
           <div className="flex flex-col mt-20 pl-4 md:pl-8 lg:pl-12">
             <h1 className="font-inter font-semibold text-white text-lg lg:text-2xl leading-5">
@@ -196,7 +196,7 @@ const TreasuryAsset = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row w-full mt-12 space-y-4 sm:space-y-0 sm:space-x-12 items-start">
+      <div className="flex flex-col sm:flex-row w-full mt-12 space-y-4 sm:space-y-0 sm:space-x-12 items-center">
         <div className="font-inter font-semibold text-black text-[16px] sm:text-[20px] leading-5 bg-[#FFE9A4] rounded-[10px] p-3">
           Details
         </div>
