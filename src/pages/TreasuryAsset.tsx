@@ -140,7 +140,7 @@ const TreasuryAsset = () => {
                 <button
                   onClick={() => handleButtonClick('Partners')}
                   className={`px-6 rounded-[17px] ${
-                    activeButton === 'All'
+                    activeButton === 'Partners'
                       ? 'bg-[#FBF4F4] text-black border border-black py-1'
                       : 'text-black'
                   }`}
@@ -150,7 +150,7 @@ const TreasuryAsset = () => {
                 <button
                   onClick={() => handleButtonClick('Owners')}
                   className={`px-5 rounded-[17px] ${
-                    activeButton === 'Active'
+                    activeButton === 'Owners'
                       ? 'bg-[#FBF4F4] text-black border border-black py-1'
                       : 'text-black'
                   }`}
@@ -160,7 +160,7 @@ const TreasuryAsset = () => {
                 <button
                   onClick={() => handleButtonClick('Activities')}
                   className={`px-4 rounded-[17px] ${
-                    activeButton === 'Archive'
+                    activeButton === 'Activities'
                       ? 'bg-[#FBF4F4] text-black border border-black py-1'
                       : 'text-black'
                   }`}
