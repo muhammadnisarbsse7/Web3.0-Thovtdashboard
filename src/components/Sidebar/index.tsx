@@ -11,6 +11,7 @@ import { CalculatorIcon } from '../../Svg/Sidebar/CalculatorIcon';
 import { ThovtSidebarIcon } from '../../Svg/Sidebar/ThovtsIcon';
 import { TreasuryIcon } from '../../Svg/Sidebar/TreasuryIcon';
 import { PortfolioIcon } from '../../Svg/Sidebar/PortfolioIcon';
+import { Selecticon } from '../../Svg/Sidebar/SelectIcon';
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -115,6 +116,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       >
                         <PortfolioIcon />
                         My Portfolio
+                        {/* <Selecticon /> */}
                       </NavLink>
                     </React.Fragment>
                   );
@@ -131,6 +133,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 >
                   <TreasuryIcon />
                   Treasury
+                  {/* <Selecticon /> */}
                 </NavLink>
               </li>
 
@@ -144,6 +147,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 >
                   <ThovtSidebarIcon />
                   $THOVT
+                  {/* <Selecticon /> */}
                 </NavLink>
               </li>
 
@@ -172,6 +176,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       >
                         <CalculatorIcon />
                         Calculator
+                        {/* <Selecticon /> */}
                       </NavLink>
                     </React.Fragment>
                   );
@@ -187,6 +192,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 >
                   <DaoIcon />
                   DAO
+                  {/* <Selecticon /> */}
                 </NavLink>
               </li>
               {/* <!-- Menu Links --> */}
@@ -199,6 +205,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 >
                   <LinksIcon />
                   Links
+                  {/* <Selecticon /> */}
                 </NavLink>
               </li>
             </ul>
