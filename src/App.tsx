@@ -7,6 +7,7 @@ import PageTitle from './components/PageTitle';
 // import SignUp from './pages/Authentication/SignUp';
 import Treasury from './pages/Treasury';
 import Chart from './pages/Chart';
+import TreasuryAsset from './pages/TreasuryAsset';
 import MyPortfolio from './pages/Dashboard/MyPortfolio';
 import FormElements from './pages/Form/FormElements';
 import FormLayout from './pages/Form/FormLayout';
@@ -97,6 +98,16 @@ function App() {
             </>
           }
         />
+        <Route
+          path="/treasuryAsset"
+          element={
+            <>
+              <PageTitle title="Treasury Asset" />
+              <TreasuryAsset />
+            </>
+          }
+        />
+
         {/* <Route
           path="/chart"
           element={

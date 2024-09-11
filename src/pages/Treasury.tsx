@@ -15,6 +15,7 @@ import { FaLocationDot } from 'react-icons/fa6';
 import ProfileCard from '../components/ProfileCard';
 import DividentCards from '../components/DividentCards';
 import { DividendsIcon } from '../Svg/Dividends';
+import { NavLink } from 'react-router-dom';
 
 // Data array containing heading values for each card
 const cardData = [
@@ -225,9 +226,11 @@ const CardRow = () => {
         <h1 className="font-inter font-semibold text-[20px] leading-[24.2px] text-white">
           Portfolio
         </h1>
-        <div className="mt-[26.89px]">
-          <ProfileCard />
-        </div>
+        <NavLink to="/treasuryAsset">
+          <div className="mt-[26.89px]">
+            <ProfileCard />
+          </div>
+        </NavLink>
       </div>
 
       <div className=" mt-[29.89px] ">
