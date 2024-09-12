@@ -187,7 +187,7 @@ const TreasuryAsset = () => {
                     Bali Invest Management
                   </div>
                   <div className="font-inter font-semibold text-[#7D8090]  text-[14px] leading-[14px]">
-                    Managements
+                    Management
                   </div>
                 </div>
               </div>
