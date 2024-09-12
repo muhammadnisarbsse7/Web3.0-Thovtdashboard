@@ -214,7 +214,7 @@ const TreasuryAsset = () => {
         </div>
       </div>
 
-      <div className="">
+      <div>
         <TreasuryAssetDetails />
       </div>
     </>
