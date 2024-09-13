@@ -20,9 +20,9 @@ import { NavLink } from 'react-router-dom';
 // Data array containing heading values for each card
 const cardData = [
   { heading1: 'Holders', heading2: '26154', icon: <HoldersIcon /> },
-  { heading1: 'Market Cap', heading2: '$50.186.749', icon: <MarketCapIcon /> },
+  { heading1: 'Market', heading2: '$50.186.749', icon: <MarketCapIcon /> },
   {
-    heading1: 'Treasury bal.',
+    heading1: 'Treasury',
     heading2: '$10.166.062',
     icon: <TreasuryBalanceIcon />,
   },
@@ -34,19 +34,19 @@ const cardData = [
 // Card component
 const Card = ({ heading1, heading2, icon }) => {
   return (
-    <div className="w-[155px] h-[84px] bg-gradient-to-b from-[#262626] to-[#25252500] p-2 flex flex-col justify-between border border-[#3D3D3D] rounded-lg shadow">
-      <div className="flex justify-between items-center mt-[8px] ">
-        <div className="flex flex-col space-y-2">
-          <h3 className="font-inter font-medium text-[14px] leading-[14px] text-[#FFFFFF]">
+    <div className="w-[calc(100%/1-1px)] sm:w-[calc(100%/1-1px)] md:w-[calc(100%/1-1px)] lg:w-[calc(100%/1-1px)] h-auto p-2 flex flex-col justify-between border   border-[#3D3D3D] rounded-lg shadow bg-gradient-to-b from-[#262626] to-[#25252500]">
+      <div className="flex flex-col-reverse gap-3 sm:flex-row justify-start items-start sm:justify-between  mt-[8px]">
+        <div className="flex flex-col space-y-2 ">
+          <h3 className="font-inter font-medium text-[14px]  leading-[14px] text-[#FFFFFF]">
             {heading1}
           </h3>
           <h4 className="font-inter font-medium text-[12px] leading-3 text-[#FFFFFF]">
             {heading2}
           </h4>
         </div>
-        {icon}
+        <div className=" ">{icon}</div>
       </div>
-      <div className="font-poppins font-normal text-[10px] leading-[15px] text-[#45E3B8] ">
+      <div className="font-poppins font-normal text-[10px] leading-[15px] text-[#45E3B8] mt-2">
         2.52%(+$324.82)
       </div>
     </div>
@@ -62,7 +62,7 @@ const CardRow = () => {
         Summary
       </h1>
 
-      <div className="flex  flex-wrap gap-5">
+      <div className="grid grid-cols-2 sm:grid  sm:grid-cols-3 lg:grid-cols-6  gap-5  justify-between">
         {cardData.map((card, index) => (
           <Card
             key={index}
