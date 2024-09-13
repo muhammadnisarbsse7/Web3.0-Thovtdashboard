@@ -59,7 +59,7 @@ const CardRow = () => {
   return (
     <div>
       <h1 className="font-inter font-semibold text-white text-[20px] leading-[28px] mb-6 ">
-        Summary
+        Summar
       </h1>
 
       <div className="grid grid-cols-2 sm:grid  sm:grid-cols-3 lg:grid-cols-6  gap-5  justify-between">
