@@ -83,12 +83,12 @@ const CardRow = () => {
         </div>
 
         <div className="flex-1 flex flex-col space-y-5  ">
-          <div className="flex items-center justify-between lg:justify-start lg:space-x-8 ">
+          <div className="flex items-center justify-between lg:justify-between lg: ">
             {/* <Breadcrumb pageName="Treasury Portfolio" /> */}
             <h1 className="font inter font-semibold text-[20px] text-white leading-5 ">
               Treasury Portfolio
             </h1>
-            <div className="ml-4 lg:ml-12">
+            <div className="ml-4 lg:ml-2">
               <p className="font-inter font-semibold text-sm lg:text-base text-white">
                 List
               </p>
@@ -98,7 +98,7 @@ const CardRow = () => {
               Chart
             </div>
           </div>
-          <div className="space-y-4 ">
+          <div className="space-y-4 w-full ">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="flex flex-row items-center">
                 <RealEstateIcon />
@@ -110,7 +110,7 @@ const CardRow = () => {
                     BTC
                   </h1>
                 </div>
-                <div className="flex flex-col justify-between ml-auto lg:ml-24">
+                <div className="flex flex-col justify-between ml-auto lg:justify-between">
                   <h1 className="font-inter font-semibold text-white text-sm lg:text-base">
                     $6,000,000
                   </h1>
@@ -135,7 +135,7 @@ const CardRow = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row mt-8 lg:mt-[30px] lg:justify-between ">
-        <div className="flex flex-col lg:h-auto lg:w-[789px] ">
+        <div className="flex flex-col lg:h-auto lg:w-full ">
           {/* <Breadcrumb pageName="Treasury Balance by Assets" /> */}
           <h1 className="font-inter font-semibold text-[20px] text-white leading-5 mb-6 ">
             Treasury Balance by Assets
