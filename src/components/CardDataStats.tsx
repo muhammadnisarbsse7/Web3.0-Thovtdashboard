@@ -18,11 +18,11 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
     <div
       className="rounded-xl border border-[#3D3D3D] bg-gradient-to-b from-[#262626] to-[#25252500] shadow-default dark:border-strokedark dark:bg-boxdark 
                  w-full flex-grow p-4"
-      style={{
-        padding: '2vw',
-        maxWidth: '30%',
-        minWidth: '250px',
-      }}
+      // style={{
+      //   padding: '2vw',
+      //   maxWidth: '30%',
+      //   minWidth: '250px',
+      // }}
     >
       <div className="flex items-start justify-start gap-4 ">
         <div
@@ -36,18 +36,18 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
         </div>
         <div>
           <h4
-            className="font-plusJakartaSans font-semibold text-white leading-tight"
-            style={{
-              fontSize: 'clamp(1rem, 2vw, 1.5rem)',
-            }}
+            className="font-plusJakartaSans font-semibold text-white lg:text-[16px] leading-tight"
+            // style={{
+            //   fontSize: 'clamp(1rem, 2vw, 1.5rem)',
+            // }}
           >
             {total}
           </h4>
           <h1
-            className="font-plusJakartaSans font-medium text-[#B9B9B9]"
-            style={{
-              fontSize: 'clamp(0.875rem, 1.5vw, 1rem)',
-            }}
+            className="font-plusJakartaSans font-medium text-[#B9B9B9] lg:text-[12px]"
+            // style={{
+            //   fontSize: 'clamp(0.875rem, 1.5vw, 1rem)',
+            // }}
           >
             {title}
           </h1>
