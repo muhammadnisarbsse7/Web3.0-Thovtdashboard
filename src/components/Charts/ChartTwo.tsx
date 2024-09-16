@@ -149,10 +149,10 @@ export default function BarChart() {
           floated={true}
           shadow={false}
           color="transparent"
-          className="flex flex-col gap-4 rounded-none justify-between md:flex-row md:items-center"
+          className="flex flex-row gap-4 rounded-none justify-between items-center md:flex-row md:items-center mt-6"
         >
-          <div className="w-max rounded-lg text-white">
-            <h1 className="font-inter font-bold text-[18px] text-white ml-[10px] leading-5">
+          <div className="w-max rounded-lg text-white ">
+            <h1 className="font-inter font-bold text-[14px] sm:text-[18px] text-white ml-[10px] leading-5">
               Holder's Profit
             </h1>
           </div>

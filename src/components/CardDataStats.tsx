@@ -44,7 +44,7 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
             {total}
           </h4>
           <h1
-            className="font-plusJakartaSans font-medium text-[#B9B9B9] lg:text-[12px]"
+            className="font-plusJakartaSans font-medium text-[#B9B9B9] sm:text-[12px] text-[10px] lg:text-[12px]"
             // style={{
             //   fontSize: 'clamp(0.875rem, 1.5vw, 1rem)',
             // }}
