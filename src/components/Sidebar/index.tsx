@@ -11,7 +11,13 @@ import { CalculatorIcon } from '../../Svg/Sidebar/CalculatorIcon';
 import { ThovtSidebarIcon } from '../../Svg/Sidebar/ThovtsIcon';
 import { TreasuryIcon } from '../../Svg/Sidebar/TreasuryIcon';
 import { PortfolioIcon } from '../../Svg/Sidebar/PortfolioIcon';
-import { Selecticon } from '../../Svg/Sidebar/SelectIcon';
+// import { Selecticon } from '../../Svg/Sidebar/SelectIcon';
+import { PortfolioActiveIcon } from '../../Svg/Sidebar/PorfolioActiveIcon';
+import { TreasuryActiveIcon } from '../../Svg/Sidebar/TreasuryActiveIcon';
+import { LinksActiveIcon } from '../../Svg/Sidebar/LinksActiveIcon';
+import { ThovtActiveIcon } from '../../Svg/Sidebar/ThovtActiveIcon';
+import { DaoActiveIcon } from '../../Svg/Sidebar/DaoActiveIcon';
+import { CalculatorActiveIcon } from '../../Svg/Sidebar/CalculatorActiveIcon';
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -46,6 +52,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
     return () => document.removeEventListener('click', clickHandler);
   });
 
+  const [activeNav, setActiveNav] = useState<string>(pathname); // State to track active nav link
+
+  useEffect(() => {
+    setActiveNav(pathname); // Update active link on path change
+  }, [pathname]);
+
   // close if the esc key is pressed
   useEffect(() => {
     const keyHandler = ({ keyCode }: KeyboardEvent) => {
@@ -64,6 +76,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       document.querySelector('body')?.classList.remove('sidebar-expanded');
     }
   }, [sidebarExpanded]);
+
+  // Function to check if a NavLink is active
+
+  const isActiveLink = (path: string) => path === activeNav;
 
   return (
     <aside
@@ -109,31 +125,35 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <React.Fragment>
                       <NavLink
                         to="/"
-                        className={({ isActive }) =>
-                          'group relative flex items-center gap-2.5 rounded-md px-4 font-normal text-white duration-300 ease-in-out hover:text-white ' +
-                          (isActive && '!text-white')
-                        }
+                        className="group relative flex items-center gap-2.5 rounded-md px-4 font-normal text-white duration-300 ease-in-out hover:text-white"
                       >
-                        <PortfolioIcon />
-                        My Portfolio
-                        {/* <Selecticon /> */}
+                        {({ isActive }) => (
+                          <>
+                            {isActive ? (
+                              <PortfolioActiveIcon />
+                            ) : (
+                              <PortfolioIcon />
+                            )}
+                            My Portfolio
+                          </>
+                        )}
                       </NavLink>
                     </React.Fragment>
                   );
                 }}
               </SidebarLinkGroup>
-              {/* <!-- Menu Item Treasury --> */}
+              {/* Menu Item Treasury */}
               <li>
                 <NavLink
                   to="/treasury"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-inter font-normal text-[14px] text-white leading-[14px] duration-300 ease-in-out ${
-                    pathname.includes('calendar') &&
-                    'bg-graydark dark:bg-meta-4'
-                  }`}
+                  className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-inter font-normal text-[14px] text-white leading-[14px] duration-300 ease-in-out"
                 >
-                  <TreasuryIcon />
-                  Treasury
-                  {/* <Selecticon /> */}
+                  {({ isActive }) => (
+                    <>
+                      {isActive ? <TreasuryActiveIcon /> : <TreasuryIcon />}
+                      Treasury
+                    </>
+                  )}
                 </NavLink>
               </li>
 
@@ -141,13 +161,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <NavLink
                   to="/thovt"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-inter font-normal text-white text-[14px] leading-[14px] duration-300 ease-in-out hover: dark:hover: ${
-                    pathname.includes('profile') && 'bg-graydark dark:bg-meta-4'
-                  }`}
+                  className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-inter font-normal text-white text-[14px] leading-[14px] duration-300 ease-in-out"
                 >
-                  <ThovtSidebarIcon />
-                  $THOVT
-                  {/* <Selecticon /> */}
+                  {({ isActive }) => (
+                    <>
+                      {isActive ? <ThovtActiveIcon /> : <ThovtSidebarIcon />}
+                      $THOVT
+                    </>
+                  )}
                 </NavLink>
               </li>
 
@@ -161,22 +182,19 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   return (
                     <React.Fragment>
                       <NavLink
-                        to="#"
-                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-normal font-inter text-[14px] leading-[14px] text-white duration-300 ease-in-out hover: dark:hover: ${
-                          (pathname === '/forms' ||
-                            pathname.includes('forms')) &&
-                          'bg-graydark dark:bg-meta-4'
-                        }`}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          sidebarExpanded
-                            ? handleClick()
-                            : setSidebarExpanded(true);
-                        }}
+                        to="/Calculator"
+                        className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-normal font-inter text-[14px] text-white leading-[14px] duration-300 ease-in-out"
                       >
-                        <CalculatorIcon />
-                        Calculator
-                        {/* <Selecticon /> */}
+                        {({ isActive }) => (
+                          <>
+                            {isActive ? (
+                              <CalculatorActiveIcon />
+                            ) : (
+                              <CalculatorIcon />
+                            )}
+                            Calculator
+                          </>
+                        )}
                       </NavLink>
                     </React.Fragment>
                   );
@@ -186,26 +204,28 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <NavLink
                   to="/Dao"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-normal font-inter text-white text-[14px] leading-[14px]  duration-300 ease-in-out hover: dark:hover: ${
-                    pathname.includes('Dao') && 'bg-graydark dark:bg-meta-4'
-                  }`}
+                  className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-normal font-inter text-[14px] text-white leading-[14px] duration-300 ease-in-out"
                 >
-                  <DaoIcon />
-                  DAO
-                  {/* <Selecticon /> */}
+                  {({ isActive }) => (
+                    <>
+                      {isActive ? <DaoActiveIcon /> : <DaoIcon />}
+                      Dao
+                    </>
+                  )}
                 </NavLink>
               </li>
               {/* <!-- Menu Links --> */}
               <li>
                 <NavLink
                   to="/links"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-normal font-inter text-[14px] text-white leading-[14px]  duration-300 ease-in-out hover: dark:hover: ${
-                    pathname.includes('links') && 'bg-graydark dark:bg-meta-4'
-                  }`}
+                  className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-normal font-inter text-[14px] text-white leading-[14px] duration-300 ease-in-out"
                 >
-                  <LinksIcon />
-                  Links
-                  {/* <Selecticon /> */}
+                  {({ isActive }) => (
+                    <>
+                      {isActive ? <LinksActiveIcon /> : <LinksIcon />}
+                      Links
+                    </>
+                  )}
                 </NavLink>
               </li>
             </ul>

@@ -14,6 +14,8 @@ import FormLayout from './pages/Form/FormLayout';
 import Thovt from './pages/Thovt';
 import Links from './pages/Links';
 import Dao from './pages/Dao';
+import Calculator from './pages/Calculator';
+
 // import Alerts from './pages/UiElements/Alerts';
 // import Buttons from './pages/UiElements/Buttons';
 import DefaultLayout from './layout/DefaultLayout';
@@ -77,6 +79,15 @@ function App() {
             <>
               <PageTitle title="Form Layout" />
               <FormLayout />
+            </>
+          }
+        />
+        <Route
+          path="/Calculator"
+          element={
+            <>
+              <PageTitle title="Calculator" />
+              <Calculator />
             </>
           }
         />
