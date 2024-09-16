@@ -11,7 +11,7 @@ import { CalculatorIcon } from '../../Svg/Sidebar/CalculatorIcon';
 import { ThovtSidebarIcon } from '../../Svg/Sidebar/ThovtsIcon';
 import { TreasuryIcon } from '../../Svg/Sidebar/TreasuryIcon';
 import { PortfolioIcon } from '../../Svg/Sidebar/PortfolioIcon';
-// import { Selecticon } from '../../Svg/Sidebar/SelectIcon';
+import { Selecticon } from '../../Svg/Sidebar/SelectIcon';
 import { PortfolioActiveIcon } from '../../Svg/Sidebar/PorfolioActiveIcon';
 import { TreasuryActiveIcon } from '../../Svg/Sidebar/TreasuryActiveIcon';
 import { LinksActiveIcon } from '../../Svg/Sidebar/LinksActiveIcon';
@@ -125,7 +125,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <React.Fragment>
                       <NavLink
                         to="/"
-                        className="group relative flex items-center gap-2.5 rounded-md px-4 font-normal text-white duration-300 ease-in-out hover:text-white"
+                        className="group   relative flex items-center  gap-2.5 rounded-md px-4 font-normal text-white duration-300 ease-in-out hover:text-white"
                       >
                         {({ isActive }) => (
                           <>
@@ -135,6 +135,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                               <PortfolioIcon />
                             )}
                             My Portfolio
+                            {isActive && <Selecticon />}
                           </>
                         )}
                       </NavLink>
@@ -152,6 +153,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <>
                       {isActive ? <TreasuryActiveIcon /> : <TreasuryIcon />}
                       Treasury
+                      {isActive && <Selecticon />}
                     </>
                   )}
                 </NavLink>
@@ -167,6 +169,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <>
                       {isActive ? <ThovtActiveIcon /> : <ThovtSidebarIcon />}
                       $THOVT
+                      {isActive && <Selecticon />}
                     </>
                   )}
                 </NavLink>
@@ -193,6 +196,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                               <CalculatorIcon />
                             )}
                             Calculator
+                            {isActive && <Selecticon />}
                           </>
                         )}
                       </NavLink>
@@ -210,6 +214,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <>
                       {isActive ? <DaoActiveIcon /> : <DaoIcon />}
                       Dao
+                      {isActive && <Selecticon />}
                     </>
                   )}
                 </NavLink>
@@ -224,6 +229,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <>
                       {isActive ? <LinksActiveIcon /> : <LinksIcon />}
                       Links
+                      {isActive && <Selecticon />}
                     </>
                   )}
                 </NavLink>
