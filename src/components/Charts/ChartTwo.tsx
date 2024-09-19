@@ -144,7 +144,7 @@ export default function BarChart() {
       <h1 className="font-inter font-semibold text-[20px] text-white leading-5">
         Profit
       </h1>
-      <Card className="border-[#444444] w-full bg-gradient-to-b  from-[#1F1F1F] to-[#0A0A0A]">
+      <Card className="border-[#444444] w-full bg-gradient-to-b  from-[#1F1F1F] to-[#0A0A0A] border">
         <CardHeader
           floated={true}
           shadow={false}

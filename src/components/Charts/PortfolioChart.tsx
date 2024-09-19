@@ -146,7 +146,7 @@ export default function SplineAreaChart() {
   }, []);
 
   return (
-    <Card className=" w-full  bg-gradient-to-b from-[#1F1F1F] to-[#0A0A0A]">
+    <Card className=" w-full  bg-gradient-to-b from-[#1F1F1F] to-[#0A0A0A] ">
       <CardHeader className="flex flex-col gap-4 justify-between md:flex-row md:items-center rounded-none">
         <div className="text-white flex justify-between items-center w-full bg-[#1F1F1F] ">
           <h1 className="font-inter font-normal text-[14px] py-2 leading-[14px] text-white">
@@ -170,7 +170,9 @@ export default function SplineAreaChart() {
         </div>
       </CardHeader>
       <CardBody className="px-2 pb-0">
-        <h2 className="text-white text-[24px] ml-3 mb-4">USD 10,166,062</h2>
+        <h2 className="text-white font-semibold font-inter text-[24px] ml-3 mb-4">
+          USD 10,166,062
+        </h2>
         <Chart {...chartConfig(chartData, chartHeight, chartWidth)} />
       </CardBody>
     </Card>
