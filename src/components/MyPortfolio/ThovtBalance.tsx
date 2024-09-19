@@ -8,7 +8,7 @@ const CarouselCard: React.FC = () => {
       className="w-full h-48 sm:h-56 md:h-64 lg:h-48 bg-cover bg-center rounded-2xl p-4 md:p-6 lg:p-5 flex flex-col justify-between"
       style={{ backgroundImage: `url(${thovtBalance})` }}
     >
-      <div className="border">
+      <div className="">
         <div>
           <p className="font-raleway font-semibold text-[12px] sm:text-[14px] md:text-[16px] lg:text-[14px] leading-[16px] md:leading-[20px] text-[#090909]">
             Balance:
