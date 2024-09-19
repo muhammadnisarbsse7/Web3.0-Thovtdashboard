@@ -19,6 +19,7 @@ import Calculator from './pages/Calculator';
 // import Alerts from './pages/UiElements/Alerts';
 // import Buttons from './pages/UiElements/Buttons';
 import DefaultLayout from './layout/DefaultLayout';
+// import ScrollToTop from './components/ScrollBehaviours/ScrollBehaviour';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -36,6 +37,7 @@ function App() {
     <Loader />
   ) : (
     <DefaultLayout>
+      {/* <ScrollToTop /> */}
       <Routes>
         <Route
           index
@@ -64,7 +66,7 @@ function App() {
             </>
           }
         />
-        <Route
+        {/* <Route
           path="/forms/form-elements"
           element={
             <>
@@ -72,8 +74,8 @@ function App() {
               <FormElements />
             </>
           }
-        />
-        <Route
+        /> */}
+        {/* <Route
           path="/forms/form-layout"
           element={
             <>
@@ -81,7 +83,7 @@ function App() {
               <FormLayout />
             </>
           }
-        />
+        /> */}
         <Route
           path="/Calculator"
           element={
