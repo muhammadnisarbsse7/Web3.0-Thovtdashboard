@@ -20,7 +20,7 @@ const Thovt = () => {
           {/* <ChartThree /> */}
           {/* <ThovtTokenChart /> */}
           <div className="grid sm:col-span-7">
-            <h1 className="font-inter font-bold text-[18px] text-white leading-[21.78px] mb-4">
+            <h1 className="font-inter font-semibold text-[20px] text-white leading-[21.78px] mb-4">
               $THOVT Token Price
             </h1>
             <ThovtTokenPriceChart />

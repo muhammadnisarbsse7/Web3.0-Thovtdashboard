@@ -87,7 +87,7 @@ const ThovtLineChart = () => {
   return (
     <div className=" relative">
       <div className="flex justify-between mt-6 ">
-        <div className="font-inter font-semibold text-white text-5 leading-5 ">
+        <div className="font-inter font-semibold text-white text-[20px] leading-5 ">
           Volume
         </div>
         <div className="flex gap-3">
