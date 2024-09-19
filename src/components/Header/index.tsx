@@ -1,20 +1,17 @@
-import { Link } from 'react-router-dom';
-// import DropdownMessage from './DropdownMessage';
-// import DropdownNotification from './DropdownNotification';
-// import DropdownUser from './DropdownUser';
+import { Link, useLocation } from 'react-router-dom';
+
 import LogoIcon from '../../images/logo/logo-icon.svg';
 import { SearchBar } from '../../Svg/SearchBar';
 import { FilterIcon } from '../../Svg/FilterIcon';
 import { MetaMaskIcon } from '../../Svg/MetaMaskIcon';
 import { NotificationIcon } from '../../Svg/NotificationIcon';
 import { SettingIcon } from '../../Svg/SettingIcon';
-// import DarkModeSwitcher from './DarkModeSwitcher';
-// import { MetaMaskIcon } from '../../Svg/MetaMaskIcon';
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
+  const location = useLocation();
   return (
     <header className="sticky top-0 z-999 flex w-full bg-[#090909]  ">
       <div className="flex flex-grow items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11 ">
@@ -67,11 +64,24 @@ const Header = (props: {
           </Link>
         </div>
 
-        <div className="hidden lg:block">
-          <h1 className="font-inter font-semibold text-[20px] text-[#FFE9A4] leading-5 ">
-            Welcome Back
-          </h1>
-        </div>
+        {/* Conditionally render heading */}
+        {location.pathname === '/' ? (
+          <div className="hidden lg:block">
+            <h1 className="font-inter font-semibold text-[20px] text-[#FFE9A4] leading-5">
+              Welcome Back
+            </h1>
+          </div>
+        ) : (
+          <>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </>
+        )}
 
         <div className="hidden sm:block  sm:p-3 sm:bg-zinc-700  rounded-[16px] w-[488px] focus:outline-none">
           <form>
@@ -108,9 +118,6 @@ const Header = (props: {
             <NotificationIcon />
             <SettingIcon />
             <MetaMaskIcon />
-            {/* <MetaMaskIcon /> */}
-
-            {/* <DropdownMessage /> */}
 
             <h1 className="font-inter font-semibold text-[14px] text-white leading-[14px] ">
               Connect Wallet
