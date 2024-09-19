@@ -108,7 +108,7 @@ const ECommerce: React.FC = () => {
           {/* Transaction Tabs */}
           <div>
             <Breadcrumb pageName="Transactions" />
-            <div className="flex rounded-[9px] h-[42.58px] w-[281px] bg-[#FFE9A4]  border-[#ffffff]  gap-[1px]">
+            <div className="flex rounded-[9px] h-[42.58px] w-[291px] bg-[#FFE9A4]  border-4 border-white  gap-[1px]">
               <button
                 onClick={() => handleTabClick('Dividends')}
                 className={`px-10 py-1 m-[2px] rounded-md ${
