@@ -73,7 +73,7 @@ const CardRow = () => {
         ))}
       </div>
 
-      <div className="flex flex-col lg:flex-row mt-6 lg:mt-12 gap-6 lg:gap-10 ">
+      <div className="flex flex-col lg:flex-row mt-6 lg:mt-12 gap-6 lg:gap-10">
         <div className="flex-1 ">
           <Breadcrumb pageName="Treasury Growth" />
           {/* <h1 className="font-inter font-semibold text-white text-[20px] leading-5 mb-6">
@@ -82,7 +82,7 @@ const CardRow = () => {
           <ChartThree />
         </div>
 
-        <div className="flex-1 flex flex-col space-y-5  ">
+        <div className="flex-1 flex flex-col space-y-3  ">
           <div className="flex items-center justify-between lg:justify-between lg: ">
             {/* <Breadcrumb pageName="Treasury Portfolio" /> */}
             <h1 className="font inter font-semibold text-[20px] text-white leading-5 ">
@@ -98,9 +98,12 @@ const CardRow = () => {
               Chart
             </div>
           </div>
-          <div className="space-y-4 w-full ">
+          <div className="space-y-[22px]  w-full ">
             {[...Array(4)].map((_, i) => (
-              <div key={i} className="flex flex-row items-center">
+              <div
+                key={i}
+                className="flex flex-row items-center hover:bg-[#FFFFFF1A] hover:shadow-[#4B95EB1A] hover:rounded-[9px]"
+              >
                 <RealEstateIcon />
                 <div className="flex flex-col justify-between ml-2 lg:ml-4">
                   <h1 className="font-inter font-semibold text-sm lg:text-base text-white">
@@ -141,7 +144,7 @@ const CardRow = () => {
             Treasury Balance by Assets
           </h1>
           <div className="w-full lg:max-w-[100%] h-auto lg:h-auto bg-gradient-to-b from-[#3636361F] to-[#D9D9D91F] rounded-[12px] border border-[#3D3D3D]">
-            <div className="flex flex-col sm:flex-row  p-6 justify-between">
+            <div className="flex flex-col sm:flex-row  p-6 justify-between  mb-5">
               <DonutChartIcon />
               <div className="mt-6 lg:mt-[2vh] space-y-3 lg:space-y-[2vh] ">
                 <div className="flex items-center gap-2.5 lg:gap-[1vw]">
