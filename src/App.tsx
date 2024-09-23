@@ -28,7 +28,6 @@ function App() {
     <Loader />
   ) : (
     <DefaultLayout>
-      {/* <ScrollToTop /> */}
       <Routes>
         <Route
           index
