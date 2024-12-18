@@ -89,7 +89,7 @@ const options: ApexOptions = {
       'Nov',
       'Dec',
       'Jan',
-      'Feb',
+      'Febs',
       'Mar',
       'Apr',
       'May',
